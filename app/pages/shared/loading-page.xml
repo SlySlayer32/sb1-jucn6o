@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+    <GridLayout>
+        <StackLayout class="loading-container">
+            <ActivityIndicator busy="true" class="loading-indicator" />
+            <Label text="Loading..." class="h2 text-center" />
+        </StackLayout>
+    </GridLayout>
+</Page>

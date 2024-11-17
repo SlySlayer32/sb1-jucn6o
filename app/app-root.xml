@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Frame defaultPage="pages/auth/login-page" actionBarVisibility="never">
+    <Frame.transitions>
+        <Transition name="slide" />
+    </Frame.transitions>
+</Frame>

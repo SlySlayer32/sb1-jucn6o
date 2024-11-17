@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page navigatingTo="onNavigatingTo" class="page" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar title="Profile" class="action-bar">
+        <ActionItem tap="{{ onSave }}" ios.position="right" android.position="actionBar">
+            <Label text="Save" />
+        </ActionItem>
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Role:" class="text-lg mb-1" />
+            <Label text="{{ profile.role }}" class="mb-4 text-gray-600" />
+            
+            <Label text="Full Name:" class="text-lg mb-1" />
+            <TextField text="{{ profile.full_name }}" class="input mb-4" />
+            
+            <Label text="Email:" class="text-lg mb-1" />
+            <Label text="{{ profile.email }}" class="mb-4 text-gray-600" />
+            
+            <Label text="Phone:" class="text-lg mb-1" />
+            <TextField text="{{ profile.phone }}" keyboardType="phone" class="input mb-4" />
+            
+            <Button text="Logout" tap="{{ onLogout }}" class="btn btn-secondary" />
+            <ActivityIndicator busy="{{ isLoading }}" class="m-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>

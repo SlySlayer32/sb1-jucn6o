@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page navigatingTo="onNavigatingTo" class="page" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar title="Register" class="action-bar" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <TextField hint="Full Name" text="{{ fullName }}" class="input mb-2" />
+            <TextField hint="Email" text="{{ email }}" keyboardType="email" class="input mb-2" />
+            <TextField hint="Password" text="{{ password }}" secure="true" class="input mb-2" />
+            <Label text="Select Role:" class="mb-2" />
+            <SegmentedBar selectedIndex="{{ selectedRoleIndex }}" class="mb-4">
+                <SegmentedBar.items>
+                    <SegmentedBarItem title="Client" />
+                    <SegmentedBarItem title="Cleaner" />
+                </SegmentedBar.items>
+            </SegmentedBar>
+            <Button text="Register" tap="{{ onRegister }}" class="btn btn-primary mb-2" />
+            <Button text="Back to Login" tap="{{ onBackToLogin }}" class="btn btn-secondary" />
+            <ActivityIndicator busy="{{ isLoading }}" class="m-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>
